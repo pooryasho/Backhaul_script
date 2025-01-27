@@ -6,5 +6,5 @@ chmod +x /etc/logo2.sh
 if [ -f "backhaul.py" ]; then
     rm backhaul.py
 fi
-wget https://github.com/pooryasho/Backhaul_script/backhaul.py
+wget https://github.com/pooryasho/Backhaul_script/blob/main/backhaul.py
 python3 backhaul.py
