@@ -66,16 +66,16 @@ def download_binary():
     url = ""
 
     if os_name == "linux" and arch == "x86_64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.6.5/backhaul_linux_amd64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_linux_amd64.tar.gz"
         file_name = "/tmp/backhaul_linux_amd64.tar.gz"
     elif os_name == "linux" and arch == "aarch64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.6.5/backhaul_linux_arm64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_linux_arm64.tar.gz"
         file_name = "/tmp/backhaul_linux_arm64.tar.gz"
     elif os_name == "darwin" and arch == "x86_64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.6.5/backhaul_darwin_amd64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_darwin_amd64.tar.gz"
         file_name = "/tmp/backhaul_darwin_amd64.tar.gz"
     elif os_name == "darwin" and arch == "arm64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.6.5/backhaul_darwin_arm64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_darwin_arm64.tar.gz"
         file_name = "/tmp/backhaul_darwin_arm64.tar.gz"
     else:
         print("\033[91mOS or arch Unsupported\033[0m ")
@@ -122,7 +122,7 @@ def backhaul_menu():
         print("4  \033[94mPort Monitoring \033[97m[TCPdump]\033[0m")
         print("5  \033[92mEdit Reset Timer\033[0m")
         print("6  \033[91mUninstall\033[0m")
-        print("0. \033[94mExit\033[0m")
+        print("10 \033[94mExit\033[0m")
         print("\033[93m╰───────────────────────────────────────╯\033[0m")
 
         try:
@@ -141,7 +141,7 @@ def backhaul_menu():
                 edit_backhaul_reset_menu()
             elif choice == "6":
                 backhaul_uninstall()
-            elif choice == "0.":  
+            elif choice == "10":
                 print("Exiting...")
                 break
             else:
@@ -2936,7 +2936,7 @@ def backhaul_editlocal():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mSingle\033[0m")
     print("2  \033[92mMulti\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -2966,7 +2966,7 @@ def backhaul_edit_single():
     print("5  \033[93mEdit WSs\033[0m")
     print("6  \033[92mEdit WSsMux\033[0m")
     print("7  \033[93mEdit UDP\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3007,7 +3007,7 @@ def backhaul_edit_udpsingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3035,7 +3035,7 @@ def backhaul_edit_tcpsingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3063,7 +3063,7 @@ def backhaul_edit_tcpmuxsingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3092,7 +3092,7 @@ def backhaul_edit_wssingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3120,7 +3120,7 @@ def backhaul_edit_wsmuxsingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3148,7 +3148,7 @@ def backhaul_edit_wsssingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -3176,7 +3176,7 @@ def backhaul_edit_wssmuxsingle():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mIRAN Server\033[0m")
     print("2  \033[92mKharej Client\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
@@ -35992,7 +35992,7 @@ def backhaul_edit_multi():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93m[1]IRAN [10]Kharej\033[0m")
     print("2  \033[92m[10]IRAN [1]Kharej\033[0m")
-    print("0. \033[94mback to the previous menu\033[0m")
+    print("0 \033[94mback to the previous menu\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     if choice == "1":
