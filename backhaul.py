@@ -143,6 +143,9 @@ def backhaul_menu():
                 backhaul_uninstall()
             elif choice == "10":
                 print("Exiting...")
+                time.sleep(2)
+                clear()
+                break
                 break
             else:
                 print("Invalid choice.")
@@ -3974,7 +3977,7 @@ def backhaul_monitor():
     print("\033[93mChoose what to do:\033[0m")
     print("1  \033[93mSingle\033[0m")
     print("2  \033[92mMulti\033[0m")
-    print("0. \033[94mback to the main script\033[0m")
+    print("0 \033[94mback to the main script\033[0m")
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
     choice = input("\033[38;5;205mEnter your choice Please: \033[0m")
     
