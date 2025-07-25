@@ -143,9 +143,8 @@ def backhaul_menu():
                 backhaul_uninstall()
             elif choice == "10":
                 print("Exiting...")
-                time.sleep(2)
+                time.sleep()
                 clear()
-                break
                 break
             else:
                 print("Invalid choice.")
@@ -1999,6 +1998,7 @@ def backhaul_uninstall():
         backhaul_uninstall_multi()
             
     elif choice == "0":
+        clear()
         backhaul_menu()
             
     else:
@@ -2949,6 +2949,7 @@ def backhaul_editlocal():
         backhaul_edit_multi()
             
     elif choice == "0":
+        clear()
         backhaul_menu()
             
     else:
@@ -46938,6 +46939,7 @@ def edit_backhaul_reset_menu():
     elif choice == "2":
         edit_backhaul_reset_multi()
     elif choice == "0":
+        clear()
         backhaul_menu()
     else:
         print("\033[91mInvalid choice, please try again.\033[0m")
