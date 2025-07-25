@@ -143,8 +143,7 @@ def backhaul_menu():
                 backhaul_uninstall()
             elif choice == "10":
                 print("Exiting...")
-                time.sleep()
-                clear()
+                time.sleep(1)
                 break
             else:
                 print("Invalid choice.")
