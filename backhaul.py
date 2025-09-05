@@ -30,6 +30,9 @@ if os.geteuid() != 0:
 
 def display_checkmark(message):
     print("\u2714 " + message)
+    
+def clear():
+    os.system("clear")
 
 def logo():
     logo_path = "/etc/logo2.sh"
@@ -66,16 +69,16 @@ def download_binary():
     url = ""
 
     if os_name == "linux" and arch == "x86_64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_linux_amd64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.2/backhaul_linux_amd64.tar.gz"
         file_name = "/tmp/backhaul_linux_amd64.tar.gz"
     elif os_name == "linux" and arch == "aarch64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_linux_arm64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.2/backhaul_linux_arm64.tar.gz"
         file_name = "/tmp/backhaul_linux_arm64.tar.gz"
     elif os_name == "darwin" and arch == "x86_64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_darwin_amd64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.2/backhaul_darwin_amd64.tar.gz"
         file_name = "/tmp/backhaul_darwin_amd64.tar.gz"
     elif os_name == "darwin" and arch == "arm64":
-        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.1/backhaul_darwin_arm64.tar.gz"
+        url = "https://github.com/Musixal/Backhaul/releases/download/v0.7.2/backhaul_darwin_arm64.tar.gz"
         file_name = "/tmp/backhaul_darwin_arm64.tar.gz"
     else:
         print("\033[91mOS or arch Unsupported\033[0m ")
@@ -45738,8 +45741,6 @@ def configwss_multi_client9_menu(lines):
         else:
             print("\n\033[91mWrong choice, try again.")
 
-def clear():
-    os.system("clear")
 
 #10
 def configwss_multi_client10_menu(lines):
@@ -46859,8 +46860,6 @@ def configwss_multi_client9_menu2(lines):
         else:
             print("\n\033[91mWrong choice, try again.")
 
-def clear():
-    os.system("clear")
 
 #10
 def configwss_multi_client10_menu2(lines):
@@ -46960,7 +46959,7 @@ def edit_backhaul_reset_single():
         edit_backhaul_reset_server()
     elif choice == "2":
         edit_backhaul_reset_client()
-    elif choice == "3":
+    elif choice == "0":
         edit_backhaul_reset_menu()
     else:
         print("\033[91mInvalid choice, please try again.\033[0m")
@@ -47048,7 +47047,7 @@ def edit_backhaul_reset_multi():
         edit_backhaul_reset_iranserver1()
     elif choice == "2":
         edit_backhaul_reset_iranserver10()
-    elif choice == "3":
+    elif choice == "0":
         edit_backhaul_reset_menu()
     else:
         print("\033[91mInvalid choice, please try again.\033[0m")
@@ -47245,5 +47244,5 @@ def enable_backhaul_reset_kharejclients_menu():
     else:
         print("\033[91mInvalid choice, please try again.\033[0m")
 
-
+clear()
 backhaul_menu()
