@@ -1,6 +1,6 @@
 #!/bin/bash
 apt install wget -y
-wget -O /etc/logo2.sh https://raw.githubusercontent.com/pooryasho/Backhaul_script/refs/heads/main/logo.sh
+wget -O /etc/logo2.sh https://github.mohammadmir438.workers.dev/pooryasho/Backhaul_script/refs/heads/main/logo.sh
 chmod +x /etc/logo2.sh
 if [ -f "backhaul.py" ]; then
     rm backhaul.py
